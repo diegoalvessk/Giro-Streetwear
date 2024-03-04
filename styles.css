@@ -131,3 +131,53 @@ body {
     border-radius: 5px;
     margin-top: 10px;
 }
+
+
+/* footer */
+
+
+.site-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links-footer a, .social-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.social-links img {
+    width: 24px; /* Adjust the size of the icons as needed */
+    height: auto;
+}
+
+/* Optional: Add responsiveness */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links-footer, .social-links {
+        margin-bottom: 10px;
+    }
+
+    .nav-links-footer a, .social-links a {
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+}
