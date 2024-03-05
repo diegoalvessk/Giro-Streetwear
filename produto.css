@@ -82,6 +82,21 @@ body {
         justify-content: center;
         align-items: center;
     }
+
+    #main-image{
+        width: 80%;
+    }
+
+    #produto-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #produto-descricao{
+        width: 70vw;
+        height: 58vh;
+    }
 }
 
 
@@ -123,4 +138,21 @@ body {
     transition: transform 0.3s ease; 
     transform: scale(1.1);
     cursor: pointer;
+}
+
+
+.produto-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.produto-descricao{
+    margin-top: 2vh;
+    width: 20vw;
+    height: 58vh;
+    border: solid 2px black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
