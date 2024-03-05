@@ -85,12 +85,13 @@ body {
 }
 
 
+
 .image-container {
     margin-top: 2vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 72vh; /* Ajusta a altura do contêiner para a altura da viewport */
+    height: 58vh; /* Ajusta a altura do contêiner para a altura da viewport */
     overflow: hidden; /* Previne que a imagem exceda o contêiner */
 }
 
@@ -99,92 +100,27 @@ body {
     box-shadow: 10px 0 15px -5px rgba(0, 0, 0, 0.5), -10px 0 15px -5px rgba(0, 0, 0, 0.5); /* Aplica sombras nas laterais */
 }
 
-.products-container {
+.carrosel-imagens{
+    margin-top: 2vh;
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
 }
 
-.product-card {
-    width: 300px;
+.card-imagens {
+    width: 150px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.product-card img {
+.card-imagens img{
     width: 100%;
     height: auto;
 }
 
-.product-info {
-    padding: 15px;
-    text-align: center;
-}
-
-.buy-button {
-    display: inline-block;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.buy-button:hover {
-    transition: transform 0.3s ease, background-color 0.8s ease; /* Suaviza a transição de transformação e cor de fundo */
-    transform: scale(1.1); /* Aumenta o tamanho do botão */
-    background-color: #7b8188; /* Muda a cor de fundo ao passar o mouse */
-}
-
-
-/* footer */
-
-
-.site-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-content {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav-links-footer a, .social-links a {
-    color: white;
-    text-decoration: none;
-    margin-right: 15px;
-}
-
-.social-links img {
-    width: 24px; /* Adjust the size of the icons as needed */
-    height: auto;
-}
-
-/* Optional: Add responsiveness */
-@media (max-width: 600px) {
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav-links-footer, .social-links {
-        margin-bottom: 10px;
-    }
-
-    .nav-links-footer a, .social-links a {
-        margin-right: 10px;
-        margin-bottom: 5px;
-    }
+.card-imagens img:hover{
+    transition: transform 0.3s ease; 
+    transform: scale(1.1);
+    cursor: pointer;
 }
