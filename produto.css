@@ -61,7 +61,7 @@ body {
     top: 8px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .nav-links {
         display: none;
         flex-direction: column;
@@ -144,15 +144,46 @@ body {
 .produto-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5vw;
 }
 
 .produto-descricao{
     margin-top: 2vh;
-    width: 20vw;
+    width: 30vw;
     height: 58vh;
     border: solid 2px black;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
 }
+
+.adicionar-carrinho{
+    display: flex;
+    justify-content: start;
+}
+
+ /* Estilização básica do select */
+ #tamanho-select {
+    appearance: none; /* Remove a setinha padrão em alguns navegadores */
+    -webkit-appearance: none; /* Remove a setinha padrão no Chrome e Safari */
+    -moz-appearance: none; /* Remove a setinha padrão no Firefox */
+    background-color: black; /* Cor de fundo preta */
+    color: white; /* Cor da letra branca */
+    padding: 10px; /* Espaçamento interno para aumentar o tamanho */
+    border-radius: 20px; /* Bordas arredondadas */
+    border: none; /* Remove a borda padrão */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra para dar destaque */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Para remover completamente a seta, é preciso usar um wrapper */
+.select-wrapper {
+    width: max-content; /* Ajusta o tamanho do wrapper ao do select */
+   
+    border-radius: 20px; /* Bordas arredondadas no wrapper */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra do wrapper */
+}
+
+
