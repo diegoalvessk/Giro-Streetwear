@@ -10,14 +10,16 @@
 <body>
 
     <div class="navbar">
-        <div class="nav-logo">Giro Streetwear</div>
+        <a href="index.html" style="text-decoration: none; color: white;">
+            <div class="nav-logo">Giro Streetwear</div>
+        </a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-label">
             <span></span>
         </label>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="produtos.html">Produtos</a>
+            <a href="produto.html">Produtos</a>
             <a href="">
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
@@ -31,20 +33,35 @@
 
         <div class="produto-descricao" id="produto-descricao">
             <h1>Camisa de Malha</h1>
-            <p>R$59,90</p>
+            <p>R$40,00</p>
             <p class="descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quod itaque numquam repellat consequuntur ex placeat quaerat voluptatum corrupti. Corrupti nisi dicta, nesciunt eos numquam ex quia dignissimos omnis perferendis? lor</p>
             
-            <div class="select-wrapper" class="adicionar-carrinho">
-                <select name="tamanho" id="tamanho-select" >
-                    <option value="pequeno">Pequeno</option>
-                    <option value="medio">Médio</option>
-                    <option value="grande">Grande</option>
-                </select>            
+            <div class="quantity-selector">
+                <button class="decrease-button">-</button>
+                <input type="text" id="quantity" value="1" readonly>
+                <button class="increase-button">+</button>
             </div>
+
+            <div class="quantity-selector" id="carrinho-selector">
+                <button id="adicionar-carrinho" class="decrease-button">Adicionar ao Carrinho</button>
+            </div>
+            
         </div>
        
     </section>
 
+    <!-- Modal -->
+    <div id="carrinhoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <p id="textoCarrinho">Seu carrinho está vazio.</p>
+            <p id="valorCarrinho"></p>
+            <!-- Adicione mais conteúdo do carrinho aqui conforme necessário -->
+        </div>
+    </div>
+
+  
     <div class="carrosel-imagens">
         <div class="card-imagens">
             <img src="imagens/skate1.webp" alt="Camiseta Skate 1" class="clickable-image">
@@ -56,6 +73,16 @@
             <img src="imagens/carro.webp" alt="Camiseta Skate 1" class="clickable-image">
         </div>
     </div>
+
+        
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="nav-links-footer">
+                <a href="index.html">Home</a>
+                <a href="produtos.html">Produtos</a>
+            </div>
+        </div>
+    </footer>
 
     <script src="produto.js"></script>
 </body>

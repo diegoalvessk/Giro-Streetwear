@@ -152,7 +152,6 @@ body {
     margin-top: 2vh;
     width: 30vw;
     height: 58vh;
-    border: solid 2px black;
     justify-content: start;
     align-items: start;
     text-align: start;
@@ -162,28 +161,126 @@ body {
     display: flex;
     justify-content: start;
 }
-
- /* Estilização básica do select */
- #tamanho-select {
-    appearance: none; /* Remove a setinha padrão em alguns navegadores */
-    -webkit-appearance: none; /* Remove a setinha padrão no Chrome e Safari */
-    -moz-appearance: none; /* Remove a setinha padrão no Firefox */
-    background-color: black; /* Cor de fundo preta */
-    color: white; /* Cor da letra branca */
-    padding: 10px; /* Espaçamento interno para aumentar o tamanho */
-    border-radius: 20px; /* Bordas arredondadas */
-    border: none; /* Remove a borda padrão */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra para dar destaque */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    font-size: 16px; /* Tamanho da fonte */
-}
-
-/* Para remover completamente a seta, é preciso usar um wrapper */
-.select-wrapper {
-    width: max-content; /* Ajusta o tamanho do wrapper ao do select */
+.quantity-selector {
+    display: flex;
+    justify-content: center; /* Centraliza os botões e o input horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    padding: 10px; /* Espaço entre os botões/input e a borda do seletor */
+    gap: 10px; /* Espaço entre o botão de decremento, o input e o botão de incremento */
    
-    border-radius: 20px; /* Bordas arredondadas no wrapper */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra do wrapper */
+    margin-top: 5vh;
+    border: 0.2px solid black;
 }
 
+.quantity-selector button {
+    background-color: white;
+    padding: 5px 10px; /* Espaço interno do botão */
+    cursor: pointer;
+    font-size: 16px; /* Ajusta o tamanho do texto dentro do botão */
+    border: none;
+}
 
+.quantity-selector input {
+    width: 50px; /* Largura do campo de input, ajuste conforme necessário */
+    text-align: center; /* Alinha o texto no centro do input */
+    padding: 5px; /* Espaço interno do input */
+    font-size: 16px; /* Ajusta o tamanho do texto dentro do input */
+    border: none;
+}
+
+#carrinho-selector{
+    background-color: black;
+    color: white;
+}
+
+#adicionar-carrinho {
+    background-color: black;
+    color: white;
+}
+
+/* Estilo do Modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica no lugar */
+    z-index: 2; /* Sobre os outros itens */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita a rolagem se necessário */
+    background-color: rgba(0,0,0,0.4); /* Cor de fundo com opacidade */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Pode ser mais ou menos, dependendo do tamanho da tela */
+    text-align: center;
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    cursor: pointer;
+  }
+
+  
+/* footer */
+
+
+.site-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links-footer a, .social-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.social-links img {
+    width: 24px; /* Adjust the size of the icons as needed */
+    height: auto;
+}
+
+/* Optional: Add responsiveness */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links-footer, .social-links {
+        margin-bottom: 10px;
+    }
+
+    .nav-links-footer a, .social-links a {
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+  
